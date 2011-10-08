@@ -1,61 +1,9 @@
 /*global $, document, _ */
 /**
- * @fileOverview This file is used define the Overlay and Dialog widget for V5UI library.
+ * @fileOverview This file is used define the Dialog widget for V5UI library.
  * @author Jackson Tian<shyvo1987@gmail.com>
  */
 
-(function (UI) {
-    var body = $(document.body);
-    /**
-     * Overlay UI widget. It's a single node in DOM tree. Note: You must defined the .overlay in CSS for the Overlay widget.
-     * @class
-     * @constructor
-     * @namespace Overlay.
-     * @name V5UI.Overlay
-     * @example
-     *  .overlay {
-     *      position: absolute;
-     *      top: 0;
-     *      left: 0;
-     *      width: 100%;
-     *      height: 100%;
-     *      z-index: 99;
-     *      background-color: rgba(120,120,120, 0.5);
-     *  }
-     */
-    var Overlay = {};
-    Overlay.node = null;
-    /**
-     * Create the Overlay single node in DOM tree.
-     * @name create
-     * @methodOf V5UI.Overlay
-     */
-    Overlay.create = function () {
-        if (!Overlay.node) {
-            var node = $("<div class='overlay hidden'></div>");
-            body.append(node);
-            Overlay.node = node;
-        }
-
-        return Overlay.node;
-    };
-
-    /**
-     * Hide the Overlay single node in DOM tree.
-     * @name hide
-     * @methodOf V5UI.Overlay
-     */
-    Overlay.hide = function () {
-        if (Overlay.node) {
-            Overlay.node.addClass("hidden");
-        }
-    };
-
-    UI.Overlay = Overlay;
-}(V5UI));
-/**
- * Dialog UI widget.
- */
 (function (UI) {
     var body = $(document.body);
     /**
