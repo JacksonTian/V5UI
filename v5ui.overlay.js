@@ -5,7 +5,7 @@
  */
 
 (function (UI) {
-    var body = $(document.body);
+
     /**
      * Overlay UI widget. It's a single node in DOM tree.
      * Note: You must defined the .overlay in CSS for the Overlay widget.
@@ -35,7 +35,7 @@
     Overlay.create = function () {
         if (!Overlay.node) {
             var node = $("<div class='overlay hidden'></div>");
-            body.append(node);
+            $(document.body).append(node);
             Overlay.node = node;
         }
 
