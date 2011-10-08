@@ -1,0 +1,51 @@
+.tabview {
+}
+.tabview .panel {
+    display: none;
+}
+.tabview .panel.active {
+    display: block;
+    overflow: auto;
+    height: 100%;
+    width: 100%;
+    -moz-box-shadow: 0 -1px 3px #000;
+    -webkit-box-shadow: 0 -1px 3px #000;
+    box-shadow: 0 -1px 3px #000;
+    position: absolute;
+    z-index: 1;
+}
+.tabview .tabs {
+    display: -webkit-box;
+    margin: 0 0 0 15px;
+}
+.tabview .tabs li {
+    width: 128px;
+    height: 33px;
+    margin: 0 -9px;
+    text-align: center;
+    position: relative;
+    background-image: url(../images/tab_normal.png);
+    background-repeat: no-repeat;
+    display: -webkit-box;
+    -webkit-box-align: center;
+    -webkit-box-pack: center;
+}
+.tabview ul.tabs li.active {
+    z-index: 11;
+    background-image: url(../images/tab_hover.png);
+}
+.tabview .tabs a {
+    color: #000;
+}
+.tabview .tabs a:hover {
+    text-decoration: none;
+}
+.tabview .panels {
+    bottom: 0;
+    position: absolute;
+    top: 44px;
+    right: 0;
+    left: 0;
+    z-index: 1;
+    background-color: #dfe0e3;
+}

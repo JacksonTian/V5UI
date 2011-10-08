@@ -1,0 +1,49 @@
+.dialog {
+    position: absolute;
+    z-index: 100;
+    top: 300px;
+    width: 255px;
+    -webkit-box-sizing: border-box;
+    border: 2px solid #e6e6e6;
+    -webkit-border-radius: 5px;
+    background-image: -webkit-gradient(linear, left top, left bottom,
+            color-stop(0,    rgba(88, 89, 91, 0.8)),
+            color-stop(0.45, rgba(51, 51, 51, 0.8)),
+            color-stop(1,    rgba(0, 0, 0, 0.8)));
+    padding: 7px 5px;
+    text-align: center;
+}
+.dialog .buttons {
+    display: -webkit-box;
+    -webkit-box-pack: center;
+}
+.dialog .buttons a {
+    border: 1px solid #000;
+    -webkit-border-radius: 3px;
+    border-radius: 3px;
+    color: #fff;
+    display: -webkit-box;
+    width: 116px;
+    height: 37px;
+    font-size: 17px;
+    font-weight: bold;
+    -webkit-box-pack: center;
+    -webkit-box-align: center;
+    -webkit-box-sizing: border-box;
+    line-height: 1;
+}
+.dialog .buttons a:hover {
+    text-decoration: none;
+}
+.dialog .buttons a.cancel {
+    background-image: -webkit-gradient(linear, left top, left bottom,
+            color-stop(0,   #0f9cd6),
+            color-stop(1, #1e54a3));
+    margin: 0 7px 0 0;
+}
+.dialog .buttons a.yes {
+    background-image: -webkit-gradient(linear, left top, left bottom,
+            color-stop(0,   #999),
+            color-stop(0.5, #4d4d4d),
+            color-stop(1,   #4d4d4d));
+}
