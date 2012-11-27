@@ -41,15 +41,14 @@
             this.refer = options.refer;
         }
         if (options.modal) {
-            this.dialogOverlayNode = UI.Overlay.create();
+            this.overlay = UI.Overlay.create();
         }
         if (okHandle) {
             node.delegate(".yes", "click", okHandle);
         }
         node.delegate(".cancel", "click", function (event) {
             event.preventDefault();
-            self.close();
-            self.destroy();
+            self.close().destroy();
         });
         if (options.afterClose) {
             this.afterClose = options.afterClose;
@@ -62,7 +61,7 @@
      */
     Dialog.prototype.open = function () {
         var node = this.dialogNode,
-            overlay = this.dialogOverlayNode,
+            overlay = this.overlay,
             top,
             left;
         node.removeClass("hidden");
@@ -71,7 +70,7 @@
         left = (body.width() - node.width()) / 2;
         node.css("left", left);
         if (overlay) {
-            overlay.removeClass("hidden");
+            overlay.show();
         }
         return this;
     };
@@ -84,8 +83,8 @@
         var g = this.dialogNode;
         g.addClass("hidden");
         g.removeClass("fixed");
-        if (this.dialogOverlayNode) {
-            this.dialogOverlayNode.addClass("hidden");
+        if (this.overlay) {
+            this.overlay.hide();
         }
         return this;
     };

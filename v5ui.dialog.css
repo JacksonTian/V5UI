@@ -13,6 +13,12 @@
     padding: 7px 5px;
     text-align: center;
 }
+.dialog .title {
+    font-size: 24px;
+    font-weight: bold;
+    padding: 8px 0;
+    color: #fff;
+}
 .dialog .buttons {
     display: -webkit-box;
     -webkit-box-pack: center;

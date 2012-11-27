@@ -39,7 +39,7 @@
             Overlay.node = node;
         }
 
-        return Overlay.node;
+        return this;
     };
 
     /**
@@ -51,6 +51,7 @@
         if (Overlay.node) {
             Overlay.node.addClass("hidden");
         }
+        return this;
     };
 
     /**
@@ -62,6 +63,7 @@
         if (Overlay.node) {
             Overlay.node.removeClass("hidden");
         }
+        return this;
     };
 
     UI.Overlay = Overlay;
